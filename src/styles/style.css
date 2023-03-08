@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'beauty';
+    src: url('../assets/fonts/beauty.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'beauty', sans-serif;
+    background-color:black;
+    overflow-y:scroll;
+    height:120vh;
+    width:100vh;
+  }
+
+
+/* reset styles */
+
+  /* typography styles */
+  body {
+    font-family: 'beauty', sans-serif;
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 1.5em 0 1em;
+  }
+  
+  h1 { font-size: 2.5em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.75em; }
+  h4 { font-size: 1.5em; }
+  h5 { font-size: 1.25em; }
+  h6 { font-size: 1em; }
+  
+  p { margin-bottom: 1.5em; }
+  #contact-form {
+    display:flex;
+    flex-direction:column;
+   padding:11px;
+  }
+textarea {
+  height:105px;
+  width:100%;
+  border:1px solid yellow;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  color:yellow;
+  background-color:transparent;
+}
+input {
+  color:yellow;
+  background-color:transparent;
+  border:1px solid yellow;
+  width:25%;
+  justify-content:center;
+  align-items:center;
+  margin-inline:auto;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  text-align:center;
+}
+  /* layout styles */
+  .container {
+    max-width: 90%;
+    height:50%;
+
+ text-align:center;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content:center;
+    align-items:center;
+    display:block;
+    align-content:center;
+
+  }
+  a:hover {
+    color:yellow;
+
+  }
+  .section-main {
+    display:block;
+width:50vh;
+margin:auto;
+right:0;
+margin-top:0.25rem;
+text-align:center;
+    height:auto;
+    left:0;
+   position:absolute;
+    color:white;
+    background-color:black;
+
+    border:1px solid grey;
+  }
+  .work-samples {
+    position: relative;
+
+  }
+  img.samplesofwork {
+    width:50%;
+    height:auto;
+    column-gap:15px;
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  .next-work-sample {
+    background-color:transparent;
+    color:yellow;
+    width:70px;
+    margin-top:1rem;
+    border:1px solid yellow;
+    margin-inline:auto;
+    cursor:pointer;
+  }
+  .next-work-sample:hover {
+    color:white;
+    border:1px solid white;
+  }
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+
+    max-width: 700px;
+    height: auto;
+  }
+  img {
+    cursor:pointer;
+  }
+  img:hover {
+    border:0.25px solid yellow;
+  }
+  #typed-text {
+    color:orange;
+  }
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  a {text-decoration:none;}
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .work-sample {
+    position: absolute;
+margin-top:1.25rem;
+    left: 0;
+    right: 0;
+    border:1px solid yellow;
+ width:50%;
+ margin-inline:auto;
+ height:auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  }
+  
+  .work-sample.active {
+    opacity: 1;
+    visibility: visible;
+    width:85%;
+    height:AUTO;
+    margin-inline:auto;
+
+  }
+
+  button[type="submit"] {
+   background-color:transparent;
+   color:yellow;
+   font-family:"beauty";
+   width:125px;
+   margin-inline:auto;
+   border:0.5px solid pink;
+   cursor:pointer;
+
+  }
+  button[type="submit"]:hover {
+    color:pink;
+    border:0.5px solid yellow;
+  }
+  .header {
+    background-color: #531616;
+    color: #7cd918;
+    padding: 1em;
+    position:relative;
+    min-width:120%;
+  
+  }
+  .header nav ul li a:hover {
+    color:yellow;
+    border-bottom:1px solid white;
+  }
+  .footer {
+    background-color: #333;
+    color: #21b7b46d;
+    padding: 1em;
+    display: flex;
+    position: fixed;
+    margin-top:1.25rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .center {
+    text-align:center;
+  }
+  .header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline-block; /* Display the li elements as inline-block */
+    margin-right: 1em; /* Add some spacing between the li elements */
+  }
+  a {
+    text-decoration:none;
+  }
+  .header nav ul li:last-child {
+    margin-right: 0; /* Remove the right margin from the last li element */
+  }
+  
+  .header nav ul li a {
+    display: inline-block; /* Display the link elements as inline-block */
+    padding: 0.5em; /* Add some padding to create some space */
+    text-decoration: none;
+    color: white;
+  }
+  .section-main {
+    opacity: 0;
+    visibility: hidden;
+    display:flex;
+    margin-bottom: calc(1em + 1.5rem); /* Add margin equal to height of footer */
+    width:85%;
+    flex-direction:column;
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+
+  }
+a.linkstowork {
+  text-decoration:none;
+}
+  .section-main.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0s;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  

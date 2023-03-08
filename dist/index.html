@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./dist/styles/style.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+      </div>
+    <header class="header">
+      <h1 class="center">My Portfolio</h1>
+      <hr>
+      <nav>
+  
+        <ul>
+          <li><a href="#s1">About</a></li>
+          <li><a href="#s2">Work</a></li>
+          <li><a href="#s3">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+        <section class="section-main" id="s1">
+<h1>About me</h1>
+            <span id="typed-text" ><p></p></span>
+            
+            <span id="typed-text">  <p></p></span>
+              <span id="typed-text"> <p></p></span>
+          </section> 
+
+
+
+
+        <section class="section-main" id="s2">
+
+          <button class="next-work-sample">&#8594;</button>
+            <h1>My Work</h1>
+            <div class="work-samples">
+              <div class="work-sample active">
+              <h2>OpenAi API</h2>
+              <h3><a href = "https://openai-cool.herokuapp.com/" target="blank" class="linkstowork">Deployed App</a></h3>
+              <h3><a href = "https://github.com/gammahazard/openai" target="blank" class="linkstowork">Github Repository</a></h3>
+              <img class="samplesofwork" src="./dist/assets/openai-grammar.png" onclick="openModal(this)">
+              <img class="samplesofwork" src="./dist/assets/openai-santa.jpg" onclick="openModal(this)">
+              <p>Frameworks: EJS View engine, NodeJS backend API for requests and routes to handle them, showcasing the power of openAI API</p>
+              </div>
+              <div class="work-sample">
+                <h2>CyberCitizens</h2>
+                <h3><a href = "https://cybercitizens.io" target="blank" class="linkstowork">Deployed App</a></h3>
+                <h3><a href = "https://github.com/gammahazard/Fleet-SDK-cc" target="blank" class="linkstowork">Github Repository</a></h3>
+                <img class="samplesofwork" src="./dist/assets/cybercitizenswork.png" onclick="openModal(this)">
+                <p> Frameworks used : NodeJS backend, JavaScript for client-side functionality, webpack CLI bundling, babel/core for compatibility and various other packages</p>
+              </div>
+              <div class="work-sample">
+
+                            <h2>To-do List</h2>
+                <h3><a href = "https://todo-java2.herokuapp.com/" target="blank" class="linkstowork">Deployed App</a></h3>
+                <h3><a href = "https://github.com/gammahazard/todolist-java" target="blank" class="linkstowork">Github Repository</a></h3>
+                <img class="samplesofwork" src="./dist/assets/todo1.png" onclick="openModal(this)">
+                <p> Frameworks used : SpringBoot Backend API, Vaadin framework to convert Java to JavaScript for front end</p>
+              </div>
+              <!-- Add more work sample divs here -->
+              <div class="work-sample">
+
+                <h2>Read me Generator</h2>
+  
+    <h3><a href = "https://github.com/gammahazard/Generate-A-Readme" target="blank" class="linkstowork">Github Repository</a></h3>
+    <img class="samplesofwork" src="./dist/assets/readme.png" onclick="openModal(this)">
+    <p> Readme generator in JavaScript to easily generate a readme for all project types</p>
+  </div>
+
+  <div class="work-sample">
+
+    <h2>Tech-Blog</h2>
+    <h3><a href = "https://techblogmvc1221.herokuapp.com/" target="blank" class="linkstowork">Deployed App</a></h3>
+<h3><a href = "https://github.com/gammahazard/MVC-Tech-Blog" target="blank" class="linkstowork">Github Repository</a></h3>
+<img class="samplesofwork" src="./dist/assets/tech-blog.png" onclick="openModal(this)">
+<p>A tech blog using authentication and a back end api to make posts for users to view, editing functionality for users who post</p>
+</div>
+    
+<!-- Add more work sample divs here -->
+
+            </div>
+          </section>
+
+                    <section class="section-main" id="s3">
+                        <div class="title"><h1>Contact</h1></div>
+                        <form id="contact-form">
+                          <label for="name">Name</label>
+                          <input type="text" id="name" name="name">
+                          <label for="email">Email</label>
+                          <input type="email" id="email" name="email">
+                          <label for="message">Message</label>
+                          <textarea id="message" name="message"></textarea>
+                          <button type="submit">Send Message</button>
+                        </form>
+                      </section>
+
+        
+    </main>
+
+    <script src="./bundle.js"></script>
+    <script src="./dist/js/misc.js"></script>
+  </body>
+  <footer class="footer">
+    <p>&copy; 2023 My Portfolio</p>
+  </footer>
+</html>
