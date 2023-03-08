@@ -7,6 +7,8 @@
     font-family: 'beauty', sans-serif;
     background-color:black;
     overflow-y:scroll;
+    height:120vh;
+    width:100vh;
   }
 
 
@@ -95,7 +97,7 @@ text-align:center;
     border:1px solid grey;
   }
   .work-samples {
-   
+    position: relative;
 
   }
   img.samplesofwork {
@@ -119,7 +121,15 @@ text-align:center;
   .next-work-sample {
     background-color:transparent;
     color:yellow;
+    width:70px;
     margin-top:1rem;
+    border:1px solid yellow;
+    margin-inline:auto;
+    cursor:pointer;
+  }
+  .next-work-sample:hover {
+    color:white;
+    border:1px solid white;
   }
   /* Modal Content (image) */
   .modal-content {
@@ -163,7 +173,9 @@ margin-top:1.25rem;
     left: 0;
     right: 0;
     border:1px solid yellow;
- 
+ width:50%;
+ margin-inline:auto;
+ height:auto;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
