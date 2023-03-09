@@ -1,16 +1,18 @@
 const sections = document.querySelectorAll('.section-main'); // Get all section elements
 const links = document.querySelectorAll('nav a'); // Get all navbar links
-
 function showSection(id) {
   sections.forEach(section => {
     if (section.id === id) { // If section ID matches the given ID, show it
       section.classList.add('active');
+      section.style.display = 'block';
+      document.body.classList.add('active-section-' + id);
     } else { // Otherwise, hide it
       section.classList.remove('active');
+      section.style.display = 'none';
+      document.body.classList.remove('active-section-' + section.id);
     }
   });
 }
-
 links.forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault(); // Prevent the default link behavior

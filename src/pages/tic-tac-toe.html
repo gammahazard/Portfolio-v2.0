@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  </head>
+  <body>
+
+    <div class="board">
+      
+        <div class="row">
+          <div class="cell" data-cell data-index="0"></div>
+          <div class="cell" data-cell data-index="1"></div>
+          <div class="cell" data-cell data-index="2"></div>
+        </div>
+        <div class="row">
+          <div class="cell" data-cell data-index="3"></div>
+          <div class="cell" data-cell data-index="4"></div>
+          <div class="cell" data-cell data-index="5"></div>
+        </div>
+        <div class="row">
+          <div class="cell" data-cell data-index="6"></div>
+          <div class="cell" data-cell data-index="7"></div>
+          <div class="cell" data-cell data-index="8"></div>
+        </div>
+      </div>
+    <script src="../js/tic-tac-toe.js"></script>
+  </body>
+  <style>
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.cell:hover {
+  border:2px solid rgb(2, 178, 243);
+}
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px solid yellow;
+  color: yellow;
+  font-weight: bolder;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  color: yellow;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgb(230, 0, 242);
+  }
+  to {
+    box-shadow: 0 0 20px rgb(226, 0, 188);
+  }
+}
+
+.glow {
+  animation: glow 1s ease-out;
+}
+  </style>
+  <script>const cells = document.querySelectorAll('.cell');
+
+    cells.forEach(cell => {
+      cell.addEventListener('click', () => {
+        cell.classList.add('glow');
+        setTimeout(() => {
+          cell.classList.remove('glow');
+        }, 1000);
+      });
+    });</script>
+</html>
