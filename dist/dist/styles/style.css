@@ -172,14 +172,8 @@ text-align:center;
 display:none;
   }
   a {text-decoration:none;}
-  body:not(.active-section-s1) .section-main:not(.active) * {
-    pointer-events: none;
-  }
-  section {
-    pointer-events:none;
-    display:none;
-    height:auto;
-  }
+ 
+
   section.active {
     pointer-events:auto
   }
