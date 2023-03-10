@@ -43,7 +43,7 @@ contactForm.addEventListener('submit', function(event) {
   submitButton.disabled = true;
   submitButton.textContent = 'Loading...';
 
-  fetch('http://localhost:3000/sendMail', {
+  fetch('https://backend-profile-emailer.herokuapp.com/sendMail', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, email, message })
